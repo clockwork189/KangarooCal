@@ -25,8 +25,6 @@
 
 	<div class="row">
 		<div class="large-6 columns">
-			<h3 class="subheader">The Grid</h3>
-
 			<!-- Grid Example -->
 			<div class="row">
 				<div class="large-12 columns calendar">
@@ -57,10 +55,9 @@
 					</div>
 					<div class="row">
 						<div class="large-4 columns">
-							<label>Due Date</label>
 						</div>
 						<div class="large-8 columns">
-							<input type="text" name="duedate" class="datepicker" />
+							<input type="button" class="submit button" value="Schedule Task" />
 						</div>
 					</div>
 				</fieldset>
@@ -68,10 +65,10 @@
 		</div>
 	</div>
 
-  	<script src="javascripts/vendor/jquery.js"></script>
-  	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-  	<script src="javascripts/fullcalendar.min.js"></script>
-  	<script src="javascripts/gcal.js"></script>
+	<script src="javascripts/vendor/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script src="javascripts/fullcalendar.min.js"></script>
+	<script src="javascripts/gcal.js"></script>
 	<script src="javascripts/foundation/foundation.js"></script>
 	<script src="javascripts/foundation/foundation.alerts.js"></script>
 	<script src="javascripts/foundation/foundation.clearing.js"></script>
@@ -86,18 +83,16 @@
 	<script src="javascripts/foundation/foundation.section.js"></script>
 	<script src="javascripts/foundation/foundation.tooltips.js"></script>
 	<script src="javascripts/foundation/foundation.topbar.js"></script>
+	<script src="javascripts/app/App.js"></script>
   <script>
 	$(document).foundation();
 	$(document).ready(function() {
-	    // page is now ready, initialize the calendar...
-	    $('.calendar').fullCalendar({
-	        // put your options and callbacks here
-    	});
-    	$( ".datepicker" ).datepicker({
+		// page is now ready, initialize the calendar...
+		$( ".datepicker" ).datepicker({
 			changeMonth: true,
 			changeYear: true
-	    });
-
+		});
+		renderCalendar();
 	});
   </script>
 </body>
