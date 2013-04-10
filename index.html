@@ -52,7 +52,15 @@
 							<label>Due Date</label>
 						</div>
 						<div class="large-8 columns">
-							<input type="text" name="taskname" />
+							<input type="text" name="duedate" class="datepicker" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-4 columns">
+							<label>Due Date</label>
+						</div>
+						<div class="large-8 columns">
+							<input type="text" name="duedate" class="datepicker" />
 						</div>
 					</div>
 				</fieldset>
@@ -61,6 +69,7 @@
 	</div>
 
   	<script src="javascripts/vendor/jquery.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
   	<script src="javascripts/fullcalendar.min.js"></script>
   	<script src="javascripts/gcal.js"></script>
 	<script src="javascripts/foundation/foundation.js"></script>
@@ -84,6 +93,10 @@
 	    $('.calendar').fullCalendar({
 	        // put your options and callbacks here
     	});
+    	$( ".datepicker" ).datepicker({
+			changeMonth: true,
+			changeYear: true
+	    });
 
 	});
   </script>
